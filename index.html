@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>VAST CHALLENGE!</title>
+
+    <link rel="stylesheet" href="/css/dc.css">
+</head>
+
+<body>
+    <h1>Parqueaderos PUJ</h1>
+
+    <div id="carType">
+        <strong>Tipo de Automóvil</strong>
+        <span class="reset" style="display: none;">Selected: <span class="filter"></span></span>
+        <a class="reset" href="javascript:gateNameChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+        <div class="clearfix"></div>
+    </div>
+
+    <div id="gateName">
+        <strong>Nombre de la Puerta</strong>
+        <span class="reset" style="display: none;">Selected: <span class="filter"></span></span>
+        <a class="reset" href="javascript:carTypeChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+        <div class="clearfix"></div>
+    </div>
+
+    <div>
+        <div class="dc-data-count">
+            <span class="filter-count"></span> Selected Out Of <span class="total-count"></span> records | <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
+        </div>
+    </div>
+    <table class="table table-hover dc-data-table">
+    </table>
+    <!--Librearias para graficos -->
+    <script src="crossfilter.js"></script>
+    <script src="d3.js"></script>
+    <script src="dc.js"></script>
+
+    <!-- Firebase Script-->
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCfhniX0psp2VefLtdtKuC2a7dVLCLyymw",
+            authDomain: "pparejas-8b804.firebaseapp.com",
+            databaseURL: "https://pparejas-8b804.firebaseio.com",
+            projectId: "pparejas-8b804",
+            storageBucket: "pparejas-8b804.appspot.com",
+            messagingSenderId: "595950097907"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!--Datos para Estadisticas-->
+    <script src="data.js"></script>
+
+</body>
+
+</html>
